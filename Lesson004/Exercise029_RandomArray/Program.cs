@@ -10,8 +10,23 @@ Console.WriteLine("Введите границы массива: ");
 int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
 
+// Подсмотрено в пятом семинаре :(
+int[] GetArray(int size, int min, int max)
+{
+    int[] massive = new int[size];
 
-/* void FillArray(int[] collection)
+    for (int i = 0; i < size; i++)
+    {
+        massive[i] = new Random().Next(min, max +1);
+    }
+    return massive;
+}
+
+int[] array = GetArray(N, a, b);
+Console.WriteLine(String.Join(" ", array));
+/* 
+// Вариант из лекции
+void FillArray(int[] collection)
 {
     int length = collection.Length;
     int index = 0;
@@ -39,7 +54,7 @@ int[] array = new int[N];
 FillArray(array);
 PrintArray(array);*/
 
-int[] Array(int start, int end, int Num)
+/*int[] Array(int start, int end, int Num)
 {
     int[] massive = new int[N];
     for(int i = 0; i < N; i++)
@@ -54,3 +69,4 @@ int[] Array(int start, int end, int Num)
 Console.WriteLine(Array(a, b, N));
 
 // В терминале начало выдавать "System.Int32[]" после результата, пока не сообразил как исправить
+*/
