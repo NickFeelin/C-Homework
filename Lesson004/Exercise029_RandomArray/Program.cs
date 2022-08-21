@@ -11,7 +11,7 @@ int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
 
 
-void FillArray(int[] collection)
+/* void FillArray(int[] collection)
 {
     int length = collection.Length;
     int index = 0;
@@ -37,5 +37,20 @@ void PrintArray(int[] col)
 int[] array = new int[N];
 
 FillArray(array);
-PrintArray(array);
-Console.WriteLine();
+PrintArray(array);*/
+
+int[] Array(int start, int end, int Num)
+{
+    int[] massive = new int[N];
+    for(int i = 0; i < N; i++)
+    {
+        massive[i] = new Random().Next(start, end);
+        Console.Write(massive[i] + " ");
+    }
+    return massive;
+    //Console.WriteLine($"[{String.Join(", ", massive)}]");
+}
+
+Console.WriteLine(Array(a, b, N));
+
+// В терминале начало выдавать "System.Int32[]" после результата, пока не сообразил как исправить
