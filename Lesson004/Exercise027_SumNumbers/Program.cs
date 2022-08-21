@@ -4,12 +4,10 @@
 
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
-int sum = 0;
 
-int Numbers()
+int Numbers(int N)
 {
-    int N = num;
-
+    int sum = 0;
     while (N > 0)
     {
         sum = sum + N % 10;
@@ -17,7 +15,7 @@ int Numbers()
     }
     return sum;
 }
-Numbers();
 
-Console.Write($"Сумма цифр числа {num} равна {sum}");
+Console.WriteLine(Numbers(num));
+//Console.Write($"Сумма цифр числа {num} равна {sum}");
 Console.WriteLine();
