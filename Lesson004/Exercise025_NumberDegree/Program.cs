@@ -8,17 +8,16 @@ int a = int.Parse(Console.ReadLine());
 Console.Write("Введите степень: ");
 int b = int.Parse(Console.ReadLine());
 
-int num = 1;
-
-int Degree()
+int Degree(int num, int degree)
 {
-    for(int i = 0; i < b; i++)
+    int res = 1;
+    for(int i = 1; i <= degree; i++)
     {
-        num *= a;
+        res *= num;
     }
-    return num;
+    return res;
 }
-Degree();
 
-Console.Write($"Число {a} в степени {b} равно {num}");
+//Console.Write($"Число {a} в степени {b} равно {num}");
+Console.WriteLine(Degree(a, b));
 Console.WriteLine();
