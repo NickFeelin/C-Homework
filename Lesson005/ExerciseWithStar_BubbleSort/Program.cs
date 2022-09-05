@@ -18,12 +18,12 @@ void BubbleSort(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        for (int j = 1; j < arr.Length - i; j++)
+        for (int j = i + 1; j < arr.Length; j++)
         {
-            if (arr[j] < arr[j - 1])
+            if (arr[i] > arr[j])
             {
-                int place = arr[j - 1];
-                arr[j - 1] = arr[j];
+                int place = arr[i];
+                arr[i] = arr[j];
                 arr[j] = place;
             }  
         }
