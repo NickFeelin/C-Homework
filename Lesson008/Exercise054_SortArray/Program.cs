@@ -29,7 +29,7 @@ void PrintArray(int[,] matr)
     }
 }
 
-void BubbleSort(int[,] arr)
+void SortToMin(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -64,5 +64,5 @@ int[,] matrix = GetArray(arr, col, beginNum, endNum);
 PrintArray(matrix);
 Console.WriteLine();
 
-BubbleSort(matrix);
+SortToMin(matrix);
 PrintArray(matrix);
